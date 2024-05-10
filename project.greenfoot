@@ -1,6 +1,7 @@
 #Greenfoot project file
 class.Apple.image=apple1.png
 class.Elephant.image=elephant.png
+class.MyWorld.image=background.jpg
 dependency1.from=MyWorld
 dependency1.to=Label
 dependency1.type=UsesDependency
@@ -21,8 +22,8 @@ dependency6.to=Apple
 dependency6.type=UsesDependency
 editor.fx.0.height=737
 editor.fx.0.width=814
-editor.fx.0.x=720
-editor.fx.0.y=51
+editor.fx.0.x=620
+editor.fx.0.y=12
 height=830
 package.numDependencies=6
 package.numTargets=4
