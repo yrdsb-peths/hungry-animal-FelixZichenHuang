@@ -18,7 +18,8 @@ public class Elephant extends Actor
     /**
      *
      * Constructor - The code that gets run one time when object is created.
-     */ public Elephant()
+     */ 
+    public Elephant()
     {
         for (int i = 0; i < idleRight.length; i++)
         {
@@ -94,7 +95,31 @@ public class Elephant extends Actor
         {
             removeTouching(Apple.class);
             MyWorld world = (MyWorld) getWorld();
-            world.createApple();
+            int r = Greenfoot.getRandomNumber(2);
+            if (r == 0)
+            {
+                world.createApple();
+            }
+            else if (r == 1)
+            {
+                world.createBanana();
+            }
+            world.increaseScore();
+            elephantSound.play();
+        }
+        else if (isTouching(Banana.class))
+        {
+            removeTouching(Banana.class);
+            MyWorld world = (MyWorld) getWorld();
+            int r = Greenfoot.getRandomNumber(2);
+            if (r == 0)
+            {
+                world.createApple();
+            }
+            else if (r == 1)
+            {
+                world.createBanana();
+            }
             world.increaseScore();
             elephantSound.play();
         }

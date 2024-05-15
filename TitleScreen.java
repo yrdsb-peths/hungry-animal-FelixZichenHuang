@@ -30,7 +30,7 @@ public class TitleScreen extends World
     public void act()
     {
         // Start the game if user presses the space bar.
-        if(Greenfoot.isKeyDown("space"))
+        if(Greenfoot.isKeyDown("enter"))
         {
             MyWorld gameWorld = new MyWorld();
             Greenfoot.setWorld(gameWorld);
@@ -50,7 +50,7 @@ public class TitleScreen extends World
         Label label = new Label("Use \u2190 and \u2192 to move", 40);
         addObject(label,220,257);
         label.setLocation(300,260);
-        Label label2 = new Label("Press <space> to start", 40);
+        Label label2 = new Label("Press <enter> to start", 40);
         addObject(label2,311,267);
         label2.setLocation(300,310);
     }
