@@ -8,10 +8,11 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class MyWorld extends World
 {
-    private int score = 0;
+    int score = 0;
     Label scoreLabel;
     Label levelLabel;
-    private int level = 1;
+    int level = 1;
+    GreenfootSound bgm = new GreenfootSound("bgm.mp3");
     
     /**
      * Constructor for objects of class MyWorld.
@@ -42,6 +43,8 @@ public class MyWorld extends World
         {
             createBanana();
         }
+        
+        playBGM();
     }
     
     /**
@@ -99,5 +102,10 @@ public class MyWorld extends World
         int x = Greenfoot.getRandomNumber(getWidth());
         int y = 0;
         addObject(apple, x, y);
+    }
+    
+    public void playBGM()
+    {
+        bgm.playLoop();
     }
 }
