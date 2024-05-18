@@ -1,10 +1,10 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Banana here.
+ * One of the foods for our elephant.
  * 
  * @author Felix Huang
- * @version May 2024;
+ * @version May 2024
  */
 public class Banana extends Actor
 {

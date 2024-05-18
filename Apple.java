@@ -1,7 +1,7 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Food for our elephant.
+ * One of the foods for our elephant.
  * 
  * @author Felix Huang 
  * @version May 2024

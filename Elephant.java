@@ -86,8 +86,8 @@ public class Elephant extends Actor
     }
     
     /**
-     * Eat the apple and spawn new apple if an apple is eaten.
      * 
+     * Eat the apple and spawn new apple if an apple is eaten.
      */
     public void eat()
     {

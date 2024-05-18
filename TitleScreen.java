@@ -9,10 +9,11 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class TitleScreen extends World
 {
     Label titleLabel = new Label("The Elephant", 60);
+    GreenfootSound opening = new GreenfootSound("opening.mp3");
     
     /**
-     * Constructor for objects of class TitleScreen.
      * 
+     * Constructor for objects of class TitleScreen.
      */
     public TitleScreen()
     {    
@@ -32,18 +33,19 @@ public class TitleScreen extends World
         // Start the game if user presses the space bar.
         if(Greenfoot.isKeyDown("enter"))
         {
+            opening.stop();
             MyWorld gameWorld = new MyWorld();
             Greenfoot.setWorld(gameWorld);
         }
     }
     
     /**
+     * 
      * Prepare the world for the start of the program.
      * That is: create the initial objects and add them to the world.
      */
     private void prepare()
     {
-
         Elephant elephant = new Elephant();
         addObject(elephant,390,110);
         elephant.setLocation(310,110);
@@ -53,5 +55,23 @@ public class TitleScreen extends World
         Label label2 = new Label("Press <enter> to start", 40);
         addObject(label2,311,267);
         label2.setLocation(300,310);
+    }
+    
+    /**
+     * 
+     * Start playing the opening music when the "Run" button is clicked.
+     */
+    public void started()
+    {
+        opening.playLoop();
+    }
+    
+    /**
+     * 
+     * Pause the opening music when the "Pause" button is clicked.
+     */
+    public void stopped()
+    {
+        opening.pause();
     }
 }

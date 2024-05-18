@@ -3,8 +3,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 /**
  * Write a description of class MyWorld here.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Felix Huang 
+ * @version May 2024
  */
 public class MyWorld extends World
 {
@@ -44,7 +44,7 @@ public class MyWorld extends World
             createBanana();
         }
         
-        playBGM();
+        bgm.playLoop();
     }
     
     /**
@@ -92,20 +92,20 @@ public class MyWorld extends World
     }
     
     /**
+     * Start playing the background music when the "Run" button is clicked.
      * 
-     * Create a new apple at random location at top of screen.
      */
-    public void spawnApple()
-    {
-        Apple apple = new Apple();
-        apple.setSpeed(level);
-        int x = Greenfoot.getRandomNumber(getWidth());
-        int y = 0;
-        addObject(apple, x, y);
-    }
-    
-    public void playBGM()
+    public void started()
     {
         bgm.playLoop();
+    }
+    
+    /**
+     * Stop playing the background music when the "Pause" button is clicked.
+     * 
+     */
+    public void stopped()
+    {
+        bgm.pause();
     }
 }
